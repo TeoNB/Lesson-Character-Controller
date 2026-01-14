@@ -24,7 +24,7 @@ public class CameraControllerFPS : MonoBehaviour
 
         //Del input, necesitamos obtener la posición del ratón.
         Vector2 mouseMovement = input.actions["Look"].ReadValue<Vector2>() * sensitivity;
-        Debug.Log(mouseMovement);
+        //Debug.Log(mouseMovement);
         xRotation -= mouseMovement.y;
 
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);

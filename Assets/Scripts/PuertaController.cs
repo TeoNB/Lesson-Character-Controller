@@ -67,7 +67,7 @@ public class PuertaController : MonoBehaviour
         closing = true;
     }
     */
-    void ActivateObject()
+    public void ActivateObject(bool value)
     {
         startTime = Time.time;
         opening = true;
