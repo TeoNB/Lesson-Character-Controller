@@ -32,9 +32,10 @@ public class RaycastController : MonoBehaviour
 
         if(Physics.Raycast(ray, out infoHit, raycastLength))
         {
-            Debug.Log("Estas tocando un objeto con Collider " + infoHit.collider.gameObject.tag);
-            Debug.Log("A distancia " + infoHit.distance.ToString());
-            infoHit.collider.SendMessage("ActivateObject", true, SendMessageOptions.DontRequireReceiver);
+            Debug.Log("HIT " + infoHit.collider.gameObject.name);
+            //Debug.Log("Estas tocando un objeto con Collider " + infoHit.collider.gameObject.tag);
+            //Debug.Log("A distancia " + infoHit.distance.ToString());
+            infoHit.collider.SendMessageUpwards("ActivateObject", true, SendMessageOptions.DontRequireReceiver);
         }
     }
 }
